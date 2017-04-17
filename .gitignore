@@ -40,6 +40,9 @@ jspm_packages
 # dependencies
 /node_modules
 
+# editors / IDEs
+/.vscode
+
 # testing
 /coverage
 
