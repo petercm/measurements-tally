@@ -17,14 +17,14 @@ class App extends Component {
 
   onBufferChange = (e) => {
     e.preventDefault();
-    const buffer = e.target.value ? parseInt(e.target.value, 10) : undefined;
+    const buffer = e.target.value ? parseFloat(e.target.value, 10) : undefined;
     this.setState({
       buffer: buffer
     });
   }
 
   onAddMeasurement = (value) => {
-    const measurement = value ? parseInt(value, 10) : undefined;
+    const measurement = value ? parseFloat(value, 10) : undefined;
     if (measurement) {
       this.setState({
         measurements: this.state.measurements.concat(measurement)

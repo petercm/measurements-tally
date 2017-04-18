@@ -4,7 +4,7 @@ import './BufferForm.css';
 import { ControlLabel, Form, FormControl, FormGroup } from 'react-bootstrap';
 
 const BufferForm = ({ buffer, onBufferChange }) => (
-  <Form inline className="BufferForm" onSubmit={onBufferChange}>
+  <Form inline noValidate className="BufferForm" onSubmit={(e)=>e.preventDefault()}>
     <FormGroup>
       <ControlLabel>Buffer</ControlLabel>
       &nbsp;

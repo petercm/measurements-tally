@@ -12,7 +12,7 @@ const onSubmit = (handler) => (event) => {
 };
 
 const MeasurementForm = ({ onAddMeasurement }) => (
-  <Form inline className="MeasurementForm" onSubmit={onSubmit(onAddMeasurement)}>
+  <Form noValidate inline className="MeasurementForm" onSubmit={onSubmit(onAddMeasurement)}>
     <FormGroup>
       <FormControl name="measurement" type="number" placeholder="measurement" />
     </FormGroup>
