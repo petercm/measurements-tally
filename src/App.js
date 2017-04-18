@@ -23,13 +23,11 @@ class App extends Component {
     });
   }
 
-  onAddMeasurement = (value) => {
-    const measurement = value ? parseFloat(value, 10) : undefined;
-    if (measurement) {
-      this.setState({
-        measurements: this.state.measurements.concat(measurement)
-      });
-    }
+  onAddMeasurement = (values) => {
+    const toAdd = values.map((v) => parseFloat(v, 10)).filter((v) => !isNaN(v));
+    this.setState({
+      measurements: this.state.measurements.concat(toAdd)
+    });
   }
 
   render() {
