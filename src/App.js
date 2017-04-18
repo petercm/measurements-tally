@@ -25,8 +25,10 @@ class App extends Component {
 
   onAddMeasurement = (values) => {
     const toAdd = values.map((v) => parseFloat(v, 10)).filter((v) => !isNaN(v));
+    const measurements = Array.from(this.state.measurements);
+    measurements.push(toAdd);
     this.setState({
-      measurements: this.state.measurements.concat(toAdd)
+      measurements
     });
   }
 

@@ -10,7 +10,7 @@ const measurementList = (measurements) => (
     </thead>
     <tbody>
       { measurements.map((m, i) => (
-        <tr key={`m-${i}`}><td>{m}</td></tr>
+        <tr key={`m-${i}`}><td>{m.join(' x ')}</td></tr>
       ))}
     </tbody>
   </table>

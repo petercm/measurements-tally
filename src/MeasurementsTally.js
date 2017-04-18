@@ -2,7 +2,8 @@ import React from 'react';
 
 const tally = (measurements, buffer) => {
   const tallied = measurements.reduce((accum, value) => {
-    accum[value+buffer] = (accum[value+buffer] || 0) + 1;
+    const key = value.map((v) => v+buffer).join(' x ');
+    accum[key] = (accum[key] || 0) + 1;
     return accum;
   }, {});
   return (
