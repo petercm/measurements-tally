@@ -14,7 +14,7 @@ const tally = (measurements, buffer) => {
         </tr>
       </thead>
       <tbody>
-        { Object.keys(tallied).map((m) => (
+        { Object.keys(tallied).sort().map((m) => (
           <tr key={`t-${m}`}>
             <td>{m}</td>
             <td>{tallied[m]}</td>
